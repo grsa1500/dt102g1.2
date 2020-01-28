@@ -1,0 +1,60 @@
+﻿@page
+@model moment1_2.Pages.RazorModel
+@{
+    ViewData["Title"] = "Razor";
+}
+
+<h1>Razor</h1>
+<p><b>Information</b></p>
+<br />
+<br />
+
+<!--Dagens datum och klockslag-->
+<p><b>Datum/klockslag:</b> @DateTime.Now.ToString("yyyy-MM-dd H:mm:ss")</p>
+
+<!--Hittar veckodagen-->
+@{
+    var weekday = DateTime.Now.DayOfWeek;
+    var day = weekday.ToString();
+    var message = "Idag är det inte måndag!";
+}
+
+<!--Kollar om det är måndag-->
+@if (day == "Monday")
+{
+    message = "Idag är det måndag!";
+}
+
+<br />
+
+<!--Skriver ut om det är måndag eller inte-->
+<p>@message</p>
+
+
+<!--Lista av kurser-->
+@{ 
+    var courses = new string[]
+    {
+        "DT057G, Webbutveckling I",
+        "DT084G, Introduktion till programmering i JavaScript",
+        "DT163G, Digital bildbehandling för webb",
+        "GD008G, Typografi och form för webb",
+        "DT003G, Databaser",
+        "DT093G, Webbutveckling II",
+        "DT068G, Webbanvändbarhet",
+        "DT152G, Webbdesign för CMS",
+        "DT173G, Webbutveckling III",
+        "DT162G, JavaScript-baserad webbutveckling",
+        "DT071G, Programmering I C#.net"
+    };
+}
+<br />
+
+<!--Loop för varje kurs skrivs objekt i lista-->
+<ul class="courseList">
+    @foreach(var course in courses)
+    {
+    <li>@course</li>
+    }
+    
+</ul>

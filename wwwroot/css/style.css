@@ -1,0 +1,235 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.1em;
+    font-family: 'Work Sans', sans-serif;
+    color: #ead2ac;
+    border: 40px solid #ead2ac;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 50px;
+    background: url(https://www.transparenttextures.com/patterns/concrete-wall-2.png) #dd5f46;
+}
+
+.main-body {
+    background: url(https://www.transparenttextures.com/patterns/concrete-wall.png) #1e2925;
+    padding-bottom: 150px;
+}
+
+/*inner part of page*/
+.inner-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+
+/*Logo*/
+header img {
+    max-width: 300px;
+    margin-bottom: -85px;
+    z-index: 100;
+    position: relative;
+}
+
+header {
+    padding: 15px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    
+
+}
+
+.right {
+    float: right;
+}
+
+.grid div {
+ 
+    padding: 15px;
+    min-height: 650px;
+    margin-top: 45px;
+    border: 30px double #ead2ac;
+    margin-bottom: 30px;
+ 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+
+}
+
+h1 {
+    color: #dd5f46;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    font-size: 40px;
+}
+
+footer img {
+    width: 100%;
+    margin-bottom: -10px;
+    margin-top: -150px;
+}
+
+footer {
+ text-align: center;
+ background: #ead2ac;
+ color: #1e2925;
+ position: absolute;
+ bottom: 0;
+ right:0;
+ left: 0;
+ margin-top: -100px;
+}
+
+
+a {
+    color: #ead2ac;
+
+}
+
+a:hover {
+    color: #dd5f46;
+}
+
+
+ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 7px;
+    font-size: 30px;
+
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+    text-align: center;
+}
+
+.courseList {
+    list-style-type:circle;
+    text-align: left;
+    max-width: 550px;
+    margin: auto;
+    color: #dd5f46;
+}
+
+/*Menu*/
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+
+.menu-btn {
+    position: absolute;
+    top:-30px;
+    right: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #dd5f46;
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 1050px) {
+    body  {
+        border-width: 20px;
+    }
+ 
+    .grid {
+        display: block;
+    }
+
+    .main-body {
+       padding-top: 5px;
+       min-height: 100vh;
+    }
+
+    .grid div {
+        min-height: 0;
+        border-width: 15px;
+        
+    }
+
+   ul {
+       height: auto;
+       flex-direction: row;
+       width: 100%;
+   }
+
+   ul li a {
+       font-size: 20px;
+   }
+
+   .right {
+       position: absolute;
+       top: 20px;
+       right: 10px;
+       font-size: 14px;
+   }
+
+   header img {
+       max-width: 200px;
+   }
+   
+   p {
+       font-size: 16px;
+   }
+
+}
+
+/*For mobile*/
+
+@media screen and (max-width: 600px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+   .nav {
+       display: none;
+   }
+
+   ul  {
+       display: block;
+   }
+
+   h1 {
+       font-size: 25px;
+       letter-spacing: 4px;
+   }
+
+   body {
+       border: none;
+   }
+
+   .inner-container {
+       width: 97%;
+   }
+}
